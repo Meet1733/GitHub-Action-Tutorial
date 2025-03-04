@@ -1,0 +1,14 @@
+name: Echo on Push
+
+on:
+  push:
+
+jobs:
+  echo-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Echo message
+        run: echo "Push successful"
